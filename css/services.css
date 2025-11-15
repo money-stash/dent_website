@@ -1,0 +1,125 @@
+/* Отступ перед футером */
+main {
+    margin-bottom: 60px; /* пространство между контентом и футером */
+}
+
+/* Сетка карточек услуг */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Карточка услуги */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    margin: 15px 15px 5px 15px;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.card p {
+    margin: 0 15px 15px 15px;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Hover эффекты */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card:hover h3 {
+    color: #007bff; /* акцентный цвет при наведении */
+}
+
+/* Кнопка "Записатися" */
+.zapisbtn {
+    color: white;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.zapisbtn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Секция CTA */
+.cta-book {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.cta-book .btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.modal .close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal .close:hover {
+    color: #000;
+}
+
+/* Адаптив */
+@media(max-width:768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-text, .hero-image {
+        text-align: center;
+    }
+}

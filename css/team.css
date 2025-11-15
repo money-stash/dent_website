@@ -1,0 +1,113 @@
+main {
+    margin-bottom: 100px; /* увеличенный отступ, чтобы футер не слипался с кнопкой записи */
+}
+
+.team-intro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.doctor-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.doctor-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card h4 {
+    margin: 15px 0 5px 0;
+    font-size: 1.15rem;
+    color: #222;
+}
+
+.doctor-card p.position {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.doctor-card:hover img {
+    transform: scale(1.05);
+}
+
+.doctor-card:hover h4 {
+    color: #007bff;
+}
+
+/* Кнопка записи на прием */
+.cta-book {
+    text-align: center;
+    margin: 50px 0; /* одинаковый отступ сверху и снизу */
+}
+
+.cta-book .zapisbtn {
+    display: inline-block;
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-book .zapisbtn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.modal .close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal .close:hover {
+    color: #000;
+}
