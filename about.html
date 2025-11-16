@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Ціни — Стоматологічна клініка «у Щолокових»</title>
+    <title>Про клініку — Стоматологічна клініка «у Щолокових»</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/prices.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <header class="site-header">
@@ -31,74 +31,44 @@
     </header>
 
     <main>
-        <section class="prices-intro container">
-            <h1>Наші послуги та ціни</h1>
-            <p>Нижче ви можете переглянути ціни на основні послуги. Натисніть на назву послуги, щоб дізнатися, що входить у пакет.</p>
+        <section class="about-intro container animate-on-scroll">
+            <h1>Стоматологічна клініка «у Щолокових»</h1>
+            <p>Ми поєднуємо сучасні технології та досвідчених лікарів, щоб забезпечити комфортне і якісне лікування для всієї родини. Наша мета — здорові зуби та щасливі пацієнти.</p>
+            <!-- <img src="assets/clinic-about.jpg" alt="Клініка" class="intro-image"> -->
         </section>
 
-        <section class="prices-list container">
-            <div class="price-card">
-                <div class="price-header">
-                    <span>Консультація лікаря</span>
-                    <span class="price">від 300 грн</span>
+        <section class="about-features container animate-on-scroll">
+            <h2>Чому обирають нас</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="assets/icon-doctor.png" alt="Досвідчений персонал">
+                    <h3>Досвідчений персонал</h3>
+                    <p>Наші лікарі мають від 5 до 20 років практики та постійно підвищують кваліфікацію.</p>
                 </div>
-                <div class="price-details">
-                    <ul>
-                        <li>Огляд ротової порожнини</li>
-                        <li>Консультація з планом лікування</li>
-                        <li>Рекомендації по гігієні та профілактиці</li>
-                    </ul>
+                <div class="feature-card">
+                    <img src="assets/icon-technology.png" alt="Сучасне обладнання">
+                    <h3>Сучасне обладнання</h3>
+                    <p>Ми використовуємо цифрові технології, рентген, CBCT та інноваційні методи лікування.</p>
                 </div>
-            </div>
-
-            <div class="price-card">
-                <div class="price-header">
-                    <span>Пломба (композит)</span>
-                    <span class="price">від 900 грн</span>
+                <div class="feature-card">
+                    <img src="assets/icon-sterile.png" alt="Стерильність">
+                    <h3>Стерильність</h3>
+                    <p>Гарантуємо абсолютну чистоту та безпеку процедур для кожного пацієнта.</p>
                 </div>
-                <div class="price-details">
-                    <ul>
-                        <li>Лікування карієсу</li>
-                        <li>Встановлення композитної пломби</li>
-                        <li>Шліфування та полірування</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div class="price-header">
-                    <span>Імплант (встановлення)</span>
-                    <span class="price">від 12 000 грн</span>
-                </div>
-                <div class="price-details">
-                    <ul>
-                        <li>Установка імпланта</li>
-                        <li>3D планування та рентген</li>
-                        <li>Знеболення та контроль після операції</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div class="price-header">
-                    <span>Відбілювання ZOOM</span>
-                    <span class="price">від 4 500 грн</span>
-                </div>
-                <div class="price-details">
-                    <ul>
-                        <li>Професійне відбілювання зубів</li>
-                        <li>Підготовка емалі</li>
-                        <li>Консультація після процедури</li>
-                    </ul>
+                <div class="feature-card">
+                    <img src="assets/icon-approach.png" alt="Індивідуальний підхід">
+                    <h3>Індивідуальний підхід</h3>
+                    <p>Кожен пацієнт отримує персональний план лікування та консультацію по всіх питаннях.</p>
                 </div>
             </div>
         </section>
 
-        <section class="cta-book">
+        <section class="cta-book animate-on-scroll">
             <a href="#" class="btn btn-primary zapisbtn">Записатися на прийом</a>
         </section>
     </main>
 
+    <!-- Футер -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col">
@@ -151,7 +121,17 @@
         </div>
     </div>
 
-    <script src="js/accordion.js"></script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
     <script src="js/zapis.js"></script>
 </body>
 </html>

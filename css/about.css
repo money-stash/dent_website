@@ -1,0 +1,107 @@
+main {
+    margin-bottom: 100px; /* відступ від футеру */
+}
+
+.about-intro {
+    text-align: center;
+    margin-top: 40px;
+}
+.about-features {
+    margin-top: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.feature-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.cta-book {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.cta-book .zapisbtn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-book .zapisbtn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Анимация появления блоков при скролле */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Секция intro-image */
+.about-intro .intro-image {
+    width: 100%;
+    max-width: 1200px; /* максимальная ширина */
+    height: auto; /* сохраняет пропорции */
+    display: block;
+    margin: 20px auto; /* центрирование */
+    border-radius: 8px;
+    object-fit: cover; /* обрезает, если картинка слишком большая */
+}
+
+/* Иконки в feature-card */
+.features-grid .feature-card img {
+    width: 100px; /* фиксированная ширина */
+    height: 100px; /* фиксированная высота */
+    object-fit: contain; /* сохраняет пропорции, помещает полностью */
+    display: block;
+    margin: 0 auto 15px auto; /* центрирование и отступ снизу */
+}
+
+/* Чтобы сами карточки выглядели живо при наведении */
+.features-grid .feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-grid .feature-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Если хочешь, чтобы текст тоже слегка поднимался */
+.features-grid .feature-card:hover h3,
+.features-grid .feature-card:hover p {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
