@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Хірургія — Стоматологічна практика Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="{{url_for('index')}}">Головна</a>
+                <a href="{{url_for('services')}}">Послуги</a>
+                <a href="{{url_for('team')}}">Лікарі</a>
+                <a href="{{url_for('prices')}}">Ціни</a>
+                <a href="{{url_for('about')}}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Хірургія</h1>
+                <p>Атравматичне видалення зубів, видалення «вісімок», підготовка до імплантації та інші хірургічні процедури.</p>
+            </div>
+        </section>
+
+        <section class="article container">
+            <img class="article-cover" src="https://images.pexels.com/photos/3779713/pexels-photo-3779713.jpeg" alt="Хірургічне лікування">
+
+            <p>Хірургічна стоматологія включає широкий спектр процедур: від атравматичного видалення зубів до підготовки до імплантації. Всі операції проводяться з мінімальною травмою тканин і максимальним комфортом для пацієнта.</p>
+
+            <h2>Атравматичне видалення зубів</h2>
+            <p>Сучасні методики дозволяють видаляти зуби з мінімальним пошкодженням кісткової тканини та ясен, що сприяє швидшому загоєнню і меншому дискомфорту.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/4269694/pexels-photo-4269694.jpeg" alt="Видалення зуба">
+
+            <h2>Видалення «вісімок»</h2>
+            <p>Складні зуби мудрості часто потребують хірургічного видалення. Лікарі клініки виконують процедури максимально безболісно та без ускладнень.</p>
+
+            <h2>Підготовка до імплантації</h2>
+            <p>Перед встановленням імплантатів проводиться ретельне обстеження та підготовка кісткової тканини. Це гарантує довговічність імплантатів і здоров’я пацієнта.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/6529121/pexels-photo-6529121.jpeg" alt="Підготовка до імплантації">
+
+            <h2>Інші хірургічні процедури</h2>
+            <ul class="article-list">
+                <li>резекція верхівки кореня зуба;</li>
+                <li>розкриття абсцесу та видалення інфікованих тканин;</li>
+                <li>кюретаж та лікування пародонтальних кишень;</li>
+                <li>пластика вуздечки та м’яких тканин рота;</li>
+                <li>контроль післяопераційного загоєння та рекомендації для пацієнта.</li>
+            </ul>
+
+            <p>Завдяки сучасному обладнанню та досвідченим лікарям всі хірургічні процедури проходять безболісно, без ускладнень і з максимальною ефективністю.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="/">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Головна</a></li>
+                    <li><a href="{{url_for('services')}}">Послуги</a></li>
+                    <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                    <li><a href="{{url_for('team')}}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('mobileToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+    });
+    </script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

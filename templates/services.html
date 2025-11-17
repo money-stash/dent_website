@@ -6,6 +6,7 @@
     <title>Послуги | Стоматологічна клініка Щолокових</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 <body>
     <header class="site-header">
@@ -38,36 +39,48 @@
 
         <section class="services-list container">
             <div class="cards-grid">
+                <a href="{{ url_for('profilaktyka') }}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-therapy.jpg') }}" alt="Терапія">
                     <h3>Профілактика</h3>
                     <p>Регулярні огляди, професійна гігієна, видалення зубного каменю та профілактика захворювань ясен.</p>
                 </article>
+                </a>
+                <a href="{{ url_for('treatment') }}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-implant.jpg') }}" alt="Імплантація">
                     <h3>Лікування карієсу / Реставрації</h3>
                     <p>Видалення каріозних уражень, встановлення сучасних пломб, естетичні реставрації зубів.</p>
                 </article>
+                </a>
+                <a href="{{ url_for('endodontics') }}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-pediatric.jpg') }}" alt="Ендодонтія">
                     <h3>Ендодонтія</h3>
                     <p>Лікування кореневих каналів під мікроскопом, пломбування каналів та збереження складних зубів.</p>
                 </article>
+                </a>
+                <a href="{{ url_for('surgery') }}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-whitening.jpg') }}" alt="Відбілювання">
                     <h3>Хірургія</h3>
                     <p>Атравматичне видалення зубів, видалення «вісімок», підготовка до імплантації та інші хірургічні процедури.</p>
                 </article>
+                </a>
+                <a href="{{ url_for('orthopedics') }}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-ortho.jpg') }}" alt="Хірургія">
                     <h3>Ортопедія</h3>
                     <p>Коронки, вінірі, вкладки, мостовидні конструкції та інші рішення для відновлення форми й функції зубів.</p>
                 </article>
+                </a>
+                <a href="{{ url_for('orthodontics') }}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-surgery.jpg') }}" alt="Ортодонтія">
                     <h3>Ортодонтія</h3>
                     <p>Вирівнювання зубів за допомогою брекет-систем і елайнерів, корекція прикусу для дітей і дорослих.</p>
                 </article>
+                </a>
             </div>
         </section>
 
@@ -119,9 +132,9 @@
             </div>
             <div class="footer-col">
                 <h4>Контакти</h4>
-                <p><a href="tel:+380671234567">+38 (067) 777-77-77</a></p>
-                <p><a href="mailto:info@example.com">info@example.com</a></p>
-                <p>м. Полтава, вул. Прикладна, 10</p>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ Оболонська набережна 3, корпус 3</p>
             </div>
         </div>
         <div class="footer-bottom">

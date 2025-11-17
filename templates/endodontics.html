@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ендодонтія — Стоматологічна практика Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="{{url_for('index')}}">Головна</a>
+                <a href="{{url_for('services')}}">Послуги</a>
+                <a href="{{url_for('team')}}">Лікарі</a>
+                <a href="{{url_for('prices')}}">Ціни</a>
+                <a href="{{url_for('about')}}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Ендодонтія</h1>
+                <p>Лікування кореневих каналів під мікроскопом, пломбування каналів та збереження складних зубів.</p>
+            </div>
+        </section>
+
+        <section class="article container">
+            <img class="article-cover" src="https://images.pexels.com/photos/3779703/pexels-photo-3779703.jpeg" alt="Лікування кореневих каналів">
+
+            <p>Ендодонтія — це сучасне лікування кореневих каналів зубів з метою збереження навіть складних випадків. Використання мікроскопів та високоточних інструментів забезпечує максимально ефективний результат.</p>
+
+            <h2>Діагностика та план лікування</h2>
+            <p>Перед початком лікування проводиться ретельна діагностика, включаючи рентген та 3D-сканування, щоб точно визначити стан каналів та запланувати оптимальне лікування.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/3779701/pexels-photo-3779701.jpeg" alt="Діагностика каналів зуба">
+
+            <h2>Лікування під мікроскопом</h2>
+            <p>Мікроскоп дозволяє лікарю бачити всі складні канали та відгалуження, що забезпечує повне очищення та пломбування зуба. Це значно знижує ризик повторного інфікування.</p>
+
+            <h2>Пломбування каналів</h2>
+            <p>Після ретельного очищення канали заповнюються спеціальними матеріалами, що герметизують зуб та запобігають повторній інфекції. Використовуються сучасні термоактивні матеріали для довговічності пломбування.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/3779693/pexels-photo-3779693.jpeg" alt="Пломбування каналів">
+
+            <h2>Відновлення зуба після лікування</h2>
+            <p>Після ендодонтичного лікування зуби часто потребують реставрації або коронки для відновлення функціональності та естетики. Це дозволяє зберегти природний зуб на довгі роки.</p>
+
+            <ul class="article-list">
+                <li>ретельне очищення та дезінфекція каналів;</li>
+                <li>точне пломбування всіх каналів;</li>
+                <li>відновлення зуба за допомогою пломб або коронок;</li>
+                <li>регулярні огляди для контролю стану зуба;</li>
+                <li>дотримання рекомендацій стоматолога для довготривалого ефекту.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="/">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Головна</a></li>
+                    <li><a href="{{url_for('services')}}">Послуги</a></li>
+                    <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                    <li><a href="{{url_for('team')}}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('mobileToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+    });
+    </script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

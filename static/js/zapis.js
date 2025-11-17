@@ -24,24 +24,45 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// обробка форми
-form.addEventListener("submit", (e) => {
+// обробка відправки форми
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = form.name.value.trim();
   const phone = form.phone.value.trim();
-  const message = form.message.value.trim();
-
+  const messageText = form.message.value.trim();
   if (!name || !phone) {
     response.textContent = "Будь ласка, заповніть обов’язкові поля.";
     response.style.color = "red";
     return;
   }
-
-  response.textContent = "Заявка надіслана! Дякуємо.";
-  response.style.color = "green";
-  form.reset();
-  setTimeout(() => {
-    modal.style.display = "none";
-    response.textContent = "";
-  }, 2500);
+  response.textContent = "Відправка...";
+  response.style.color = "black";
+  const formData = new FormData();
+  formData.append("name", name);
+  formData.append("phone", phone);
+  formData.append("message", messageText);
+  try {
+    const res = await fetch("/api/appointment", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) {
+      response.textContent = "Помилка відправки. Спробуйте пізніше.";
+      response.style.color = "red";
+      console.error("send error", data);
+      return;
+    }
+    response.textContent = "Заявка надіслана! Дякуємо.";
+    response.style.color = "green";
+    form.reset();
+    setTimeout(() => {
+      modal.style.display = "none";
+      response.textContent = "";
+    }, 2000);
+  } catch (err) {
+    console.error(err);
+    response.textContent = "Помилка мережі. Спробуйте пізніше.";
+    response.style.color = "red";
+  }
 });

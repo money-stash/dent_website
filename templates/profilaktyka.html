@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Профілактика — Стоматологічна практика Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="{{url_for('index')}}">Головна</a>
+                <a href="{{url_for('services')}}">Послуги</a>
+                <a href="{{url_for('team')}}">Лікарі</a>
+                <a href="{{url_for('prices')}}">Ціни</a>
+                <a href="{{url_for('about')}}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Профілактика та догляд за зубами</h1>
+                <p>Регулярні огляди, професійна гігієна та турбота про ясна допомагають запобігати карієсу та пародонтиту.</p>
+            </div>
+        </section>
+
+        <section class="article container">
+            <img class="article-cover" src="https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg" alt="Профілактика зубів">
+
+            <p>Профілактична стоматологія — це основа здорової усмішки. Регулярні огляди, професійна гігієна, видалення зубного каменю та турбота про ясна дозволяють запобігати карієсу, пародонтиту та ускладненням, які потребують складного лікування.</p>
+
+            <h2>Регулярні огляди</h2>
+            <p>Стоматологи рекомендують проходити огляд кожні 6 місяців — це дозволяє на ранніх стадіях виявляти карієс, запалення ясен, стирання зубів та інші проблеми. Чим раніше виявлена проблема — тим простіше, дешевше та швидше її вирішити.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/532786/pexels-photo-532786.jpeg" alt="Огляд у стоматолога">
+
+            <h2>Професійна гігієна</h2>
+            <p>Навіть за якісного домашнього догляду зубний наліт накопичується у важкодоступних місцях. Професійна гігієна включає ультразвукове очищення, AirFlow та полірування зубів, що повертає природну гладкість та блиск емалі.</p>
+
+            <h2>Видалення зубного каменю</h2>
+            <p>Зубний камінь — тверді відкладення, які неможливо прибрати щіткою. Саме вони викликають неприємний запах, кровоточивість ясен та розвиток пародонтиту. Регулярне видалення каменю значно знижує ризики запальних процесів.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/298611/pexels-photo-298611.jpeg" alt="Професійна чистка">
+
+            <h2>Профілактика захворювань ясен</h2>
+            <p>Запалення ясен — одна з найчастіших стоматологічних проблем. Основні методи профілактики:</p>
+
+            <ul class="article-list">
+                <li>регулярна гігієна та очищення міжзубних проміжків;</li>
+                <li>видалення нальоту та каменю;</li>
+                <li>контроль прикусу та навантаження на зуби;</li>
+                <li>використання іригатора та спеціальних ополіскувачів;</li>
+                <li>огляди у стоматолога два рази на рік.</li>
+            </ul>
+
+            <p>Здорова слизова та сильні ясна — це не тільки комфорт, а й запорука довговічності зубів.</p>
+
+            <h2>Домашня профілактика</h2>
+            <p>Щоденний догляд відіграє ключову роль. Рекомендації:</p>
+
+            <ul class="article-list">
+                <li>чистити зуби 2 рази на день не менше 2 хвилин;</li>
+                <li>використовувати якісну пасту та щітку середньої жорсткості;</li>
+                <li>очищати міжзубні проміжки флосом або йоршиками;</li>
+                <li>міняти щітку кожні 2–3 місяці;</li>
+                <li>зменшити вживання солодкого та газованих напоїв.</li>
+            </ul>
+
+            <p>Дотримання цих рекомендацій допомагає уникнути більших проблем і зберегти здоров’я ротової порожнини на довгі роки.</p>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="/">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Головна</a></li>
+                    <li><a href="{{url_for('services')}}">Послуги</a></li>
+                    <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                    <li><a href="{{url_for('team')}}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('mobileToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+    });
+    </script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

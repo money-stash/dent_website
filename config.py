@@ -1,0 +1,3 @@
+TELEGRAM_BOT_TOKEN = "8593919806:AAH2HS0upjrsCstejyzPVfnYkcyrF0_tVGw"
+TELEGRAM_CHAT_ID = -5075178119
+TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"

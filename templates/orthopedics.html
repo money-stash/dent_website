@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ортопедія — Стоматологічна практика Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="{{url_for('index')}}">Головна</a>
+                <a href="{{url_for('services')}}">Послуги</a>
+                <a href="{{url_for('team')}}">Лікарі</a>
+                <a href="{{url_for('prices')}}">Ціни</a>
+                <a href="{{url_for('about')}}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Ортопедія</h1>
+                <p>Коронки, вінірі, вкладки, мостовидні конструкції та інші рішення для відновлення форми й функції зубів.</p>
+            </div>
+        </section>
+
+        <section class="article container">
+            <img class="article-cover" src="https://images.pexels.com/photos/6529106/pexels-photo-6529106.jpeg" alt="Ортопедичне лікування">
+
+            <p>Ортопедична стоматологія дозволяє відновити функціональність і естетику зубного ряду. Ми застосовуємо сучасні методи відновлення, використовуючи індивідуальні конструкції для кожного пацієнта.</p>
+
+            <h2>Коронки та вкладки</h2>
+            <p>Коронки відновлюють форму та міцність зуба після лікування або травм. Вкладки забезпечують довговічність і точне прилягання без зайвого обточування зуба.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/6627574/pexels-photo-6627574.jpeg" alt="Коронки та вкладки">
+
+            <h2>Вінірі</h2>
+            <p>Вінірі дозволяють естетично покращити зовнішній вигляд зубів: колір, форму та симетрію. Це мінімально інвазивний метод для передніх зубів.</p>
+
+            <h2>Мостовидні конструкції</h2>
+            <p>Мости заміщують відсутні зуби, відновлюючи жувальну функцію та зовнішній вигляд зубного ряду. Використовуються сучасні матеріали для міцності та естетики.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/6528850/pexels-photo-6528850.jpeg" alt="Мостовидні конструкції">
+
+            <h2>Інші рішення</h2>
+            <ul class="article-list">
+                <li>реставрації зубів після травм;</li>
+                <li>застосування сучасних матеріалів для довговічності;</li>
+                <li>індивідуальне моделювання форми зуба;</li>
+                <li>комбіновані протези та гібридні конструкції;</li>
+                <li>контроль та корекція після встановлення ортопедичних конструкцій.</li>
+            </ul>
+
+            <p>Завдяки сучасним технологіям та професійному підходу пацієнти отримують довговічне та естетичне рішення для відновлення зубів.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="/">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Головна</a></li>
+                    <li><a href="{{url_for('services')}}">Послуги</a></li>
+                    <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                    <li><a href="{{url_for('team')}}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('mobileToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+    });
+    </script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

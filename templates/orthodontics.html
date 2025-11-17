@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ортодонтія — Стоматологічна практика Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="{{url_for('index')}}">Головна</a>
+                <a href="{{url_for('services')}}">Послуги</a>
+                <a href="{{url_for('team')}}">Лікарі</a>
+                <a href="{{url_for('prices')}}">Ціни</a>
+                <a href="{{url_for('about')}}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Ортодонтія</h1>
+                <p>Вирівнювання зубів за допомогою брекет-систем і елайнерів, корекція прикусу для дітей і дорослих.</p>
+            </div>
+        </section>
+
+        <section class="article container">
+            <img class="article-cover" src="https://images.pexels.com/photos/6627563/pexels-photo-6627563.jpeg" alt="Ортодонтія">
+
+            <p>Ортодонтичне лікування дозволяє виправити прикус, вирівняти зуби та поліпшити естетику усмішки. Ми працюємо з сучасними брекет-системами та прозорими елайнерами для дітей і дорослих.</p>
+
+            <h2>Брекет-системи</h2>
+            <p>Класичні металеві та сучасні керамічні брекети дозволяють коригувати прикус та вирівнювати зуби максимально ефективно. Індивідуальне планування гарантує точність і комфорт під час лікування.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/5355831/pexels-photo-5355831.jpeg" alt="Брекет-система">
+
+            <h2>Елайнери</h2>
+            <p>Прозорі капи (елайнери) — сучасний метод корекції прикусу без металевих конструкцій. Підходять для дорослих пацієнтів і дозволяють проводити лікування непомітно для оточуючих.</p>
+
+            <h2>Дитяча ортодонтія</h2>
+            <p>Раннє втручання дозволяє коригувати аномалії прикусу на ранніх стадіях. Ми використовуємо знімні та незнімні апарати, враховуючи індивідуальні особливості зростання і розвитку.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/6627522/pexels-photo-6627522.jpeg" alt="Дитяча ортодонтія">
+
+            <h2>Догляд і рекомендації</h2>
+            <ul class="article-list">
+                <li>регулярні огляди для контролю прогресу лікування;</li>
+                <li>догляд за брекетами та елайнерами;</li>
+                <li>використання ортодонтичних щіток і ниток;</li>
+                <li>дотримання рекомендацій лікаря для оптимального результату;</li>
+                <li>корекція прикусу та вирівнювання зубів без шкоди для здоров’я.</li>
+            </ul>
+
+            <p>Сучасна ортодонтія допомагає пацієнтам отримати гарну та здорову усмішку незалежно від віку.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="/">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Головна</a></li>
+                    <li><a href="{{url_for('services')}}">Послуги</a></li>
+                    <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                    <li><a href="{{url_for('team')}}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('mobileToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+    });
+    </script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

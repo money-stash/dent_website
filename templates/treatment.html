@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Лікування карієсу / Реставрації</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/treatment.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="{{url_for('index')}}">Головна</a>
+                <a href="{{url_for('services')}}">Послуги</a>
+                <a href="{{url_for('team')}}">Лікарі</a>
+                <a href="{{url_for('prices')}}">Ціни</a>
+                <a href="{{url_for('about')}}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Лікування карієсу / Реставрації</h1>
+                <p>Видалення каріозних уражень, встановлення сучасних пломб, естетичні реставрації зубів.</p>
+            </div>
+        </section>
+
+        <section class="article-content container">
+            <div class="article-grid">
+                <div class="article-text">
+                    <h2>Що таке карієс</h2>
+                    <p>Карієс — це руйнування тканин зуба під впливом бактерій та кислот. Раннє лікування допомагає уникнути ускладнень та зберегти природні зуби.</p>
+
+                    <h2>Методи лікування</h2>
+                    <ul>
+                        <li>Видалення уражених тканин</li>
+                        <li>Встановлення композитних або фотополімерних пломб</li>
+                        <li>Естетичні реставрації передніх зубів для природного вигляду</li>
+                        <li>Використання сучасних ізолюючих систем та технологій для комфортного лікування</li>
+                    </ul>
+
+                    <h2>Профілактика повторного карієсу</h2>
+                    <p>Регулярні огляди, професійна гігієна та індивідуальні рекомендації допомагають зберегти здоров'я зубів після реставрацій.</p>
+                </div>
+                <div class="article-images">
+                    <img src="https://images.pexels.com/photos/3845653/pexels-photo-3845653.jpeg" alt="Лікування зубів">
+                    <img src="https://images.pexels.com/photos/4269700/pexels-photo-4269700.jpeg" alt="Стоматологічна реставрація">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="/">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Головна</a></li>
+                    <li><a href="{{url_for('services')}}">Послуги</a></li>
+                    <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                    <li><a href="{{url_for('team')}}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('mobileToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+    });
+    </script>
+</body>
+</html>
