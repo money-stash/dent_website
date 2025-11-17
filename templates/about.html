@@ -3,25 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Про клініку — Стоматологічна клініка «у Щолокових»</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/about.css">
+    <title>Про клініку — Стоматологічна клініка Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="/">
-                <img src="assets/logo.png" alt="Логотип" />
-                <span>у Щолокових</span>
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
             </a>
             <nav class="main-nav" id="mainNav">
-                <a href="/">Головна</a>
-                <a href="services.html">Послуги</a>
-                <a href="team.html">Лікарі</a>
-                <a href="prices.html">Ціни</a>
-                <a href="about.html">Про клініку</a>
-                <a href="reviews.html">Відгуки</a>
-                <a href="blog.html">Блог</a>
+                <a href="{{url_for('index')}}">Головна</a>
+                <a href="{{url_for('services')}}">Послуги</a>
+                <a href="{{url_for('team')}}">Лікарі</a>
+                <a href="{{url_for('prices')}}">Ціни</a>
+                <a href="{{url_for('about')}}">Про клініку</a>
                 <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
             </nav>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
@@ -32,7 +30,7 @@
 
     <main>
         <section class="about-intro container animate-on-scroll">
-            <h1>Стоматологічна клініка «у Щолокових»</h1>
+            <h1>Стоматологічна клініка «Стоматологічна практика Щолокових»</h1>
             <p>Ми поєднуємо сучасні технології та досвідчених лікарів, щоб забезпечити комфортне і якісне лікування для всієї родини. Наша мета — здорові зуби та щасливі пацієнти.</p>
             <!-- <img src="assets/clinic-about.jpg" alt="Клініка" class="intro-image"> -->
         </section>
@@ -41,22 +39,22 @@
             <h2>Чому обирають нас</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <img src="assets/icon-doctor.png" alt="Досвідчений персонал">
+                    <img src="{{ url_for('static', filename='assets/icon-doctor.png') }}" alt="Досвідчений персонал">
                     <h3>Досвідчений персонал</h3>
                     <p>Наші лікарі мають від 5 до 20 років практики та постійно підвищують кваліфікацію.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="assets/icon-technology.png" alt="Сучасне обладнання">
+                    <img src="{{ url_for('static', filename='assets/icon-technology.png') }}" alt="Сучасне обладнання">
                     <h3>Сучасне обладнання</h3>
                     <p>Ми використовуємо цифрові технології, рентген, CBCT та інноваційні методи лікування.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="assets/icon-sterile.png" alt="Стерильність">
+                    <img src="{{ url_for('static', filename='assets/icon-sterile.png') }}" alt="Стерильність">
                     <h3>Стерильність</h3>
                     <p>Гарантуємо абсолютну чистоту та безпеку процедур для кожного пацієнта.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="assets/icon-approach.png" alt="Індивідуальний підхід">
+                    <img src="{{ url_for('static', filename='assets/icon-approach.png') }}" alt="Індивідуальний підхід">
                     <h3>Індивідуальний підхід</h3>
                     <p>Кожен пацієнт отримує персональний план лікування та консультацію по всіх питаннях.</p>
                 </div>
@@ -73,18 +71,18 @@
         <div class="container footer-grid">
             <div class="footer-col">
                 <a class="logo" href="/">
-                    <img src="assets/logo.png" alt="Логотип" />
-                    <span>у Щолокових</span>
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
                 </a>
                 <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
             </div>
             <div class="footer-col">
                 <h4>Навігація</h4>
                 <ul>
-                    <li><a href="/">Головна</a></li>
-                    <li><a href="services.html">Послуги</a></li>
-                    <li><a href="prices.html">Ціни</a></li>
-                    <li><a href="team.html">Лікарі</a></li>
+                    <li><a href="{{url_for('index')}}">Головна</a></li>
+                    <li><a href="{{url_for('services')}}">Послуги</a></li>
+                    <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                    <li><a href="{{url_for('team')}}">Лікарі</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -96,7 +94,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <small>© 2025 «у Щолокових». Усі права захищено.</small>
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
             </div>
         </div>
     </footer>
@@ -132,6 +130,6 @@
 
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     </script>
-    <script src="js/zapis.js"></script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
 </body>
 </html>

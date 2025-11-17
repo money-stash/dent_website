@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ціни — Стоматологічна клініка Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prices.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="{{ url_for('index') }}">Головна</a>
+                <a href="{{ url_for('services') }}">Послуги</a>
+                <a href="{{ url_for('team') }}">Лікарі</a>
+                <a href="{{ url_for('prices') }}" class="active">Ціни</a>
+                <a href="{{ url_for('about') }}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="prices-intro container">
+            <h1>Наші послуги та ціни</h1>
+            <p>Нижче наведено актуальний прайс на основні послуги.</p>
+        </section>
+
+        <section class="prices-list container">
+            <h2>Загальні послуги</h2>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Консультація лікаря стоматолога</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Прицільна рентгенографія</span>
+                    <span class="price">200 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Знеболення</span>
+                    <span class="price">300 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення коффердама, оптрагейта</span>
+                    <span class="price">200 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення тимчасової пломби</span>
+                    <span class="price">200 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додаткова карпула</span>
+                    <span class="price">150 грн</span>
+                </div>
+            </div>
+
+            <h2>Профілактика</h2>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Профілактична гігієна дитяча (щітка + паста)</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Профілактична гігієна дитяча ProphyFlex</span>
+                    <span class="price">1 200 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Профілактична гігієна доросла ProphyFlex І ступінь</span>
+                    <span class="price">1 400 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Профілактична гігієна доросла ProphyFlex ІІ ступінь</span>
+                    <span class="price">1 600 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Профілактична гігієна доросла ProphyFlex ІІІ ступінь</span>
+                    <span class="price">1 800 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Проведення ремінералізуючої терапії</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Проведення герметизації фісури (1 зуб)</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Професійне відбілювання в домашніх умовах (капа, гель)</span>
+                    <span class="price">10 000 грн</span>
+                </div>
+            </div>
+
+            <h2>Лікування карієсу / Реставрації</h2>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фотополімерна реставрація тимчасового зуба</span>
+                    <span class="price">1 100 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фотополімерна реставрація постійного зуба І ступінь</span>
+                    <span class="price">1 400 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фотополімерна реставрація постійного зуба ІІ ступінь</span>
+                    <span class="price">1 600 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фотополімерна реставрація постійного зуба ІІІ ступінь</span>
+                    <span class="price">2 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Естетична реставрація фронтальних зубів</span>
+                    <span class="price">3 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Естетична реставрація жувальних зубів</span>
+                    <span class="price">3 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Відновлення стінки зуба при ендодонтичному лікуванні</span>
+                    <span class="price">1 200 грн</span>
+                </div>
+            </div>
+
+            <h2>Ендодонтія</h2>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ендодонтичне лікування 1-канального зуба</span>
+                    <span class="price">2 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ендодонтичне лікування 2-канального зуба</span>
+                    <span class="price">4 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ендодонтичне лікування 3-канального зуба</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ендодонтичне лікування 4-канального зуба</span>
+                    <span class="price">8 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Надання невідкладної допомоги при гострому болю</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Лікування пульпітного тимчасового зуба</span>
+                    <span class="price">1 800 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Розпломбування (легкий канал)</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Розпломбування (складний канал)</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Тимчасова пломба кореневого каналу (1 канал)</span>
+                    <span class="price">700 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення анкерного/скловолоконного штифта</span>
+                    <span class="price">700 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення культьової вкладки (легка)</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення культьової вкладки (складна)</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Закриття перфорації</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення чужорідного тіла з кореневого каналу</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Лікування парадонтального каналу</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+
+            <h2>Хірургія</h2>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення тимчасового зуба</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення (4 ступінь, атипове)</span>
+                    <span class="price">4 500–5 200 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення (3 ступінь, ретинований)</span>
+                    <span class="price">4 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення (2 ступінь)</span>
+                    <span class="price">3 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення (1 ступінь)</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Видалення з підготовкою під імплант</span>
+                    <span class="price">7 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Пластика м'яких тканин (1 зуб)</span>
+                    <span class="price">150 $</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення кісткової пластини</span>
+                    <span class="price">150 $</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Сінусліфтинг (відкритий)</span>
+                    <span class="price">600 $</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Сінусліфтинг (закритий)</span>
+                    <span class="price">300 $</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Пластика вуздечок</span>
+                    <span class="price">3 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення формувача</span>
+                    <span class="price">3 000–1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Надання невідкладної допомоги хірургії</span>
+                    <span class="price">2 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>MegaGen - імплант</span>
+                    <span class="price">420 $</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Bayres - імплант</span>
+                    <span class="price">450 $</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Зняття швів після хірургічного втручання та промивання</span>
+                    <span class="price">300 грн</span>
+                </div>
+            </div>
+
+            <h2>Ортопедія</h2>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення скловолоконного штифта</span>
+                    <span class="price">2 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення металевого штифта (культьова вкладка)</span>
+                    <span class="price">2 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення тимчасової коронки</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення лабораторної коронки</span>
+                    <span class="price">2 400 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Металокерамічна коронка</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Безметалева коронка (цирконієва)</span>
+                    <span class="price">10 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Керамічна коронка на імплант</span>
+                    <span class="price">11 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Вінір на своїх зубах</span>
+                    <span class="price">від 10 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Зняття відбитка (2 щелепи)</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Зняття металокерамічної коронки</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Вінір на імплантах</span>
+                    <span class="price">400–500 €</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення імпланту</span>
+                    <span class="price">500 €</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Шаблон для імпланту</span>
+                    <span class="price">150 €</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Wax-up (воскове моделювання)</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Індивідуальна ложка</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Прикусні валики</span>
+                    <span class="price">800 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Частковий знімний протез</span>
+                    <span class="price">5 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Частковий знімний протез Valplast</span>
+                    <span class="price">7 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Повний знімний протез</span>
+                    <span class="price">6 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Повний знімний протез з фіксацією на кнопковий атачмент</span>
+                    <span class="price">7 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Знімний протез з металевим базисом</span>
+                    <span class="price">9 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Спортивна або суглобова капа</span>
+                    <span class="price">5 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Капа для захисту від бруксизму</span>
+                    <span class="price">3 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ремонт знімного протезу / приварка кламера / постановка штучних зубів / перебазування</span>
+                    <span class="price">3 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Перебазування знімного (часткового) протезу лабораторне (1 щелепа)</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Заміна резиночок (2 шт.)</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+
+            <h2>Ортодонтія</h2>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Контрольний огляд з корекції апарата</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Контрольний огляд з корекції Брекет Системи (2 щелепи)</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Контрольний огляд апарата</span>
+                    <span class="price">750 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Контрольний огляд Брекет Системи (1 щелепа)</span>
+                    <span class="price">750 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Плановий огляд</span>
+                    <span class="price">680 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Діагностика: розшифровка ТРГ, ОПТГ, фотопротокол, КТ</span>
+                    <span class="price">2 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Зняття відбитків (альгінатні, 1 щелепа)</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Зняття відбитків (силікон, 1 щелепа)</span>
+                    <span class="price">700 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Повторне цементування кільця/коронки</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фіксація апарату</span>
+                    <span class="price">1 100 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Зняття апарату</span>
+                    <span class="price">1 100 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Space maker</span>
+                    <span class="price">4 900 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення язичного бюгеля</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення піднебіного бюгеля</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Nance + піднебінний бюгель з кільцями</span>
+                    <span class="price">8 130 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Pendulum</span>
+                    <span class="price">12 500 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Distal Jet</span>
+                    <span class="price">12 900 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення незмінних апаратів на кільцях/капах (Haas RME, Marko Rossa)</span>
+                    <span class="price">13 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Quad-Helix, Bi-Helix</span>
+                    <span class="price">7 900 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення заслонки для язика</span>
+                    <span class="price">4 900 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Lip-bumper</span>
+                    <span class="price">4 900 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення незмінних накусочних площадок на кільцях</span>
+                    <span class="price">9 600 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення апарата Nance</span>
+                    <span class="price">5 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення сепаратора (1 шт.)</span>
+                    <span class="price">200 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення апарату Френкеля</span>
+                    <span class="price">9 900 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення вестибулярного щита</span>
+                    <span class="price">7 000 грн</span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення вестибулярного щита + заслонка для язика</span>
+                    <span class="price">8 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення ретенційного апарату</span>
+                    <span class="price">7 200 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення індивідуального трейнера</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення лицьової маски</span>
+                    <span class="price">4 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Твін-блока</span>
+                    <span class="price">1 450 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Hawley ретейнера</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення дитячого апарата-протеза</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення накусочної площадки на пуговчатих кламерах</span>
+                    <span class="price">4 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Трипода</span>
+                    <span class="price">5 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення Біоблока</span>
+                    <span class="price">9 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення піднебінного бюгеля (знімного)</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ремонт апарату 1-го ступеню складності</span>
+                    <span class="price">2 100 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ремонт апарату 2-го ступеню складності</span>
+                    <span class="price">2 700 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ремонт апарату 3-го ступеню складності</span>
+                    <span class="price">3 500 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання протрагуючих дуг в апарат</span>
+                    <span class="price">600 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання пружини</span>
+                    <span class="price">300 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання гачка</span>
+                    <span class="price">300 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання петель Рудольфа</span>
+                    <span class="price">700 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання намистинки</span>
+                    <span class="price">800 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання губного бамперу</span>
+                    <span class="price">1 600 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання похилої площадки / накусочної площадки</span>
+                    <span class="price">700 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Додавання пелота</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Апарат MARPE на 2 MI з 2 гвинтами Hyrex (2 MI + шаблони)</span>
+                    <span class="price">60 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Апарат MARPE на 4 MI з 2 гвинтами Hyrex (2 MI + шаблони)</span>
+                    <span class="price">70 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення металевої часткової лігатурної брекет-системи (2 на 4, 1 щелепа)</span>
+                    <span class="price">7 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення керамічної часткової лігатурної брекет-системи (2 на 4, 1 щелепа)</span>
+                    <span class="price">10 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення металевої самолігуючої брекет-системи H4 (1 щелепа)</span>
+                    <span class="price">17 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення металевої лігатурної брекет-системи (1 щелепа)</span>
+                    <span class="price">12 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення керамічної самолігуючої брекет-системи Damor clear (1 щелепа)</span>
+                    <span class="price">30 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення керамічної лігатурної брекет-системи (1 щелепа)</span>
+                    <span class="price">19 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Проведення корекції (1 щелепа)</span>
+                    <span class="price">750 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фіксація нового металевого самолігуючого брекета</span>
+                    <span class="price">1 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фіксація нового металевого лігатурного брекета</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фіксація нового керамічного лігатурного брекета</span>
+                    <span class="price">1 200 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Фіксація нового керамічного самолігуючого брекета</span>
+                    <span class="price">1 500 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Повторне проведення фіксації щічної трубки</span>
+                    <span class="price">500 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення мікрогвинта</span>
+                    <span class="price">6 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Зняття брекет-системи (зняття матеріалу, полірування, 1 щелепа)</span>
+                    <span class="price">3 500 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Індивідуальний незнімний ретейнер (1 щелепа)</span>
+                    <span class="price">2 500 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Ретенційна капа</span>
+                    <span class="price">2 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Відбиток на капу (1 щелепа)</span>
+                    <span class="price">700 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Відбиток ретейнер-блок (1 щелепа)</span>
+                    <span class="price">400 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення міорелаксуючої капи</span>
+                    <span class="price">14 000 грн</span>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <span>Встановлення капи при бруксизмі</span>
+                    <span class="price">2 000 грн</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-book container">
+            <a href="#" class="btn btn-primary zapisbtn">Записатися на прийом</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="/">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Головна</a></li>
+                    <li><a href="{{ url_for('services') }}">Послуги</a></li>
+                    <li><a href="{{ url_for('prices') }}">Ціни</a></li>
+                    <li><a href="{{ url_for('team') }}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380671234567">+38 (067) 777-77-77</a></p>
+                <p><a href="mailto:info@example.com">info@example.com</a></p>
+                <p>м. Полтава, вул. Прикладна, 10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Записатися на прийом</h2>
+            <form id="appointmentForm">
+                <label for="name">Ваше ім'я</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="+380 ХХХ ХХХ ХХ ХХ" required>
+
+                <label for="message">Повідомлення</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ваше питання або коментар"></textarea>
+
+                <button type="submit" class="btn btn-primary">Відправити заявку</button>
+            </form>
+            <p id="formResponse" class="form-response"></p>
+        </div>
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const pricesList = document.querySelector(".prices-list");
+  if (!pricesList) return;
+  const intro = document.querySelector(".prices-intro");
+  const searchWrap = document.createElement("div");
+  searchWrap.className = "search-wrap";
+  searchWrap.innerHTML = '<input id="priceSearch" type="search" placeholder="Пошук послуг..." aria-label="Пошук послуг"><button id="clearSearch" type="button" aria-label="Очистити пошук">✕</button><div id="searchCount" class="search-count"></div>';
+  if (intro && intro.parentNode) intro.parentNode.insertBefore(searchWrap, pricesList);
+  const input = document.getElementById("priceSearch");
+  const clearBtn = document.getElementById("clearSearch");
+  const countEl = document.getElementById("searchCount");
+  const cards = Array.from(pricesList.querySelectorAll(".price-card"));
+  cards.forEach(c => { c.dataset.orig = c.innerHTML; });
+  const noResult = document.createElement("div");
+  noResult.className = "no-results";
+  noResult.textContent = "Нічого не знайдено.";
+  noResult.style.display = "none";
+  pricesList.parentNode.insertBefore(noResult, pricesList.nextSibling);
+  function escRx(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function highlight(text, term){
+    if(!term) return text;
+    const rx = new RegExp("(" + escRx(term) + ")", "ig");
+    return text.replace(rx, "<mark>$1</mark>");
+  }
+  function update(){
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach(card=>{
+      const header = card.querySelector(".price-header");
+      const title = header ? header.innerText.toLowerCase() : "";
+      const details = card.querySelector(".price-details");
+      const detailsText = details ? details.innerText.toLowerCase() : "";
+      if (!q || title.includes(q) || detailsText.includes(q)){
+        card.style.display = "";
+        card.innerHTML = card.dataset.orig;
+        if(q){
+          const headerEl = card.querySelector(".price-header");
+          if(headerEl) headerEl.innerHTML = highlight(headerEl.innerHTML, q);
+          const detailsEl = card.querySelector(".price-details");
+          if(detailsEl) detailsEl.innerHTML = highlight(detailsEl.innerHTML, q);
+        }
+        visible++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+    countEl.textContent = q ? `Знайдено: ${visible}` : "";
+    noResult.style.display = (q && visible === 0) ? "" : "none";
+  }
+  input.addEventListener("input", update);
+  clearBtn.addEventListener("click", function(){
+    input.value = "";
+    input.focus();
+    update();
+  });
+  input.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ input.value = ""; update(); }
+  });
+  update();
+});
+</script>
+
+    <script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

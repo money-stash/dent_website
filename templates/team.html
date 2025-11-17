@@ -3,26 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Лікарі — клініка «у Щолокових»</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/team.css">
+    <title>Лікарі — клініка Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team.css') }}">
 </head>
 <body>
 <header class="site-header">
     <div class="container header-inner">
         <a class="logo" href="/">
-            <img src="assets/logo.png" alt="Логотип" />
-            <span>у Щолокових</span>
+            <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+            <span>Стоматологічна практика Щолокових</span>
         </a>
         <nav class="main-nav" id="mainNav">
-            <a href="/">Головна</a>
-            <a href="services.html">Послуги</a>
-            <a href="team.html" class="active">Лікарі</a>
-            <a href="prices.html">Ціни</a>
-            <a href="about.html">Про клініку</a>
-            <a href="reviews.html">Відгуки</a>
-            <a href="blog.html">Блог</a>
-            <a href="contact.html" class="btn btn-primary zapisbtn">Записатися</a>
+            <a href="{{url_for('index')}}">Головна</a>
+            <a href="{{url_for('services')}}">Послуги</a>
+            <a href="{{url_for('team')}}" class="active">Лікарі</a>
+            <a href="{{url_for('prices')}}">Ціни</a>
+            <a href="{{url_for('about')}}">Про клініку</a>
+            <a href="#" class="btn btn-primary zapisbtn">Записатися</a>
         </nav>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
             <span></span><span></span><span></span>
@@ -38,22 +36,22 @@
 
     <section class="team-grid">
         <article class="doctor-card">
-            <img src="assets/doctor1.jpg" alt="Остапенко Олексій Дмитрович">
+            <img src="{{ url_for('static', filename='assets/doctor1.jpg') }}" alt="Остапенко Олексій Дмитрович">
             <h4>Остапенко Олексій Дмитрович</h4>
             <p class="position">Лікар-стоматолог, хірург</p>
         </article>
         <article class="doctor-card">
-            <img src="assets/doctor2.jpg" alt="Мельник Іван Миколайович">
+            <img src="{{ url_for('static', filename='assets/doctor2.jpg') }}" alt="Мельник Іван Миколайович">
             <h4>Мельник Іван Миколайович</h4>
             <p class="position">Стоматолог-хірург</p>
         </article>
         <article class="doctor-card">
-            <img src="assets/doctor3.jpg" alt="Негреба Наталія Іванівна">
+            <img src="{{ url_for('static', filename='assets/doctor3.jpg') }}" alt="Негреба Наталія Іванівна">
             <h4>Негреба Наталія Іванівна</h4>
             <p class="position">Лікар-стоматолог-терапевт</p>
         </article>
         <article class="doctor-card">
-            <img src="assets/doctor4.jpg" alt="Галина Собакар Iванiвна">
+            <img src="{{ url_for('static', filename='assets/doctor4.jpg') }}" alt="Галина Собакар Iванiвна">
             <h4>Галина Собакар Iванiвна</h4>
             <p class="position">Імплантолог</p>
         </article>
@@ -88,19 +86,19 @@
 <footer class="site-footer">
     <div class="container footer-grid">
         <div class="footer-col">
-            <a class="logo" href="/">
-                <img src="assets/logo.png" alt="Логотип" />
-                <span>у Щолокових</span>
+            <a class="logo" href="{{url_for('index')}}">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
             </a>
             <p>Якісна стоматологія у вашому місті. Ліцензії та гарантія на всі роботи.</p>
         </div>
         <div class="footer-col">
             <h4>Навігація</h4>
             <ul>
-                <li><a href="/">Головна</a></li>
-                <li><a href="services.html">Послуги</a></li>
-                <li><a href="prices.html">Ціни</a></li>
-                <li><a href="team.html">Лікарі</a></li>
+                <li><a href="{{url_for('index')}}">Головна</a></li>
+                <li><a href="{{url_for('services')}}">Послуги</a></li>
+                <li><a href="{{url_for('prices')}}">Ціни</a></li>
+                <li><a href="{{url_for('team')}}">Лікарі</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -112,10 +110,10 @@
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <small>© 2025 «у Щолокових». Усі права захищено.</small>
+            <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
         </div>
     </div>
 </footer>
-    <script src="js/zapis.js"></script>
+    <script src="{{url_for('static', filename='js/zapis.js')}}"></script>
 </body>
 </html>
