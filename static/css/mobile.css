@@ -1,0 +1,292 @@
+/*
+    Мобільні стилі (mobile.css)
+    Цей файл містить медіазапити, які перевизначають основні стилі
+    для забезпечення оптимального вигляду на екранах менше 700px (типовий мобільний)
+    та 980px (типовий планшет).
+*/
+
+/* --- Загальні стилі та типографія для мобільних --- */
+@media(max-width: 700px) {
+    body {
+        font-size: 15px;
+    }
+
+    /* Встановлюємо єдиний бічний відступ 16px через контейнер */
+    .container {
+        padding: 0 16px;
+    }
+    
+    section {
+        padding: 30px 0 !important;
+    }
+
+    h1 {
+        font-size: 30px !important;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+    
+    /* ВИРІВНЮВАННЯ ТЕКСТУ ПО ЛІВОМУ КРАЮ */
+    /* Примусове вирівнювання тексту та заголовків по лівому краю */
+    h1, h2, h3, p {
+        text-align: left !important;
+    }
+
+    /* Приховування кнопки "Записатися" в основній навігації */
+    .main-nav .btn-primary.zapisbtn {
+        display: none; 
+    }
+    
+    /* Перевизначення центрування для Hero та About */
+    .hero-text {
+        text-align: left !important;
+    }
+    
+    .hero-ctas, .features {
+        justify-content: flex-start; 
+        flex-wrap: wrap;
+    }
+    
+    /* Вирівнювання списку переваг */
+    .about-grid > div {
+        text-align: left;
+    }
+}
+
+/* --- Хедер та Навігація --- */
+@media(max-width: 700px) {
+    .site-header {
+        border-bottom: none;
+    }
+    
+    .header-inner {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .logo span {
+        font-size: 16px;
+    }
+
+    /* Мобільне меню: повноекранне накладання */
+    .main-nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background: var(--bg);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transform: translateX(100%);
+        transition: transform .3s ease-in-out;
+        gap: 12px;
+        width: 100%; 
+        max-width: 320px;
+        align-items: flex-start;
+        box-shadow: -4px 0 10px rgba(0,0,0,0.05);
+        z-index: 30;
+    }
+    
+    .main-nav.open {
+        transform: translateX(0);
+    }
+    
+    .main-nav a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 12px 10px;
+        font-size: 17px;
+    }
+    
+    .mobile-toggle {
+        display: block;
+        z-index: 45;
+    }
+    
+    /* Стилі для іконки-гамбургера */
+    .mobile-toggle span {
+        transition: all 0.3s ease;
+    }
+
+    .mobile-toggle.open span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .mobile-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-toggle.open span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+
+/* --- Секція Hero (Планшет) --- */
+@media(max-width: 980px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero-text {
+        order: 2;
+        /* text-align: left перевизначено на 700px */
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-image {
+        order: 1;
+    }
+    
+    .hero-image img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
+    /* Buttons and features are handled at 700px to align left */
+    .hero-ctas {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .features {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+}
+
+/* --- Картки Послуг --- */
+@media(max-width: 980px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card img {
+        height: 180px;
+    }
+}
+
+/* --- Про клініку (About) --- */
+@media(max-width: 980px) {
+    .about-grid {
+        flex-direction: column;
+        gap: 30px;
+        align-items: stretch;
+    }
+    
+    .stats {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .stat {
+        flex: 1 1 auto;
+        min-width: 100px;
+    }
+}
+
+/* --- Команда (Team) --- */
+@media(max-width: 980px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ЗБІЛЬШЕНА ВИСОТА ЗОБРАЖЕНЬ ЛІКАРІВ (ПЛАНШЕТ) */
+    .doctor-card img {
+        height: 420px;
+    }
+}
+
+@media(max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    /* ЗБІЛЬШЕНА ВИСОТА ЗОБРАЖЕНЬ ЛІКАРІВ (МОБІЛЬНИЙ) */
+    .doctor-card img {
+        height: 320px;
+    }
+}
+
+/* --- Контакти --- */
+@media(max-width: 980px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-preview .lead {
+        font-size: 16px;
+    }
+    
+    .contact-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+}
+
+
+/* --- Відгуки --- */
+@media(max-width: 600px) {
+    .reviews-slider {
+        /* Дозволяємо горизонтальний скрол */
+        padding-bottom: 10px;
+    }
+    
+    .review {
+        min-width: 80%;
+    }
+}
+
+/* --- Футер --- */
+@media(max-width: 700px) {
+    .footer-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .footer-col {
+        flex: 1 1 100%;
+        /* ВИРІВНЮВАННЯ ФУТЕРА ПО ЛІВОМУ КРАЮ */
+        text-align: left;
+    }
+    
+    .footer-col .logo {
+        justify-content: flex-start;
+    }
+    
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+/* --- Модальне вікно --- */
+@media(max-width: 500px) {
+    .modal-content {
+        margin: 10% 10px;
+        width: auto;
+    }
+}

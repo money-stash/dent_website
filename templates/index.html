@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Стоматологічна клініка Щолокових</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 <body>
@@ -104,14 +105,14 @@
             <h2>Наша команда</h2>
             <div class="team-grid">
                 <article class="doctor-card">
-                    <img src="{{ url_for('static', filename='assets/doctor1.jpg') }}" alt="Доктор 1">
-                    <h4>Остапенко Олексій Дмитрович</h4>
-                    <p class="position">Лікар-стоматолог, хірург</p>
+                    <img src="{{ url_for('static', filename='assets/doctor4.jpg') }}" alt="Доктор 4">
+                    <h4>Щолокова Наталія Вікторівна</h4>
+                    <p class="position">Головний лікар</p>
                 </article>
                 <article class="doctor-card">
                     <img src="{{ url_for('static', filename='assets/doctor2.jpg') }}" alt="Доктор 2">
                     <h4>Мельник Іван Миколайович</h4>
-                    <p class="position">Стоматолог-хірург</p>
+                    <p class="position">Помічник</p>
                 </article>
                 <article class="doctor-card">
                     <img src="{{ url_for('static', filename='assets/doctor3.jpg') }}" alt="Доктор 3">
@@ -119,9 +120,9 @@
                     <p class="position">Лікар-стоматолог-терапевт</p>
                 </article>
                 <article class="doctor-card">
-                    <img src="{{ url_for('static', filename='assets/doctor4.jpg') }}" alt="Доктор 4">
-                    <h4>Галина Собакар Iванiвна</h4>
-                    <p class="position">Імплантолог</p>
+                    <img src="{{ url_for('static', filename='assets/doctor1.jpg') }}" alt="Доктор 1">
+                    <h4>Остапенко Олексій Дмитрович</h4>
+                    <p class="position">Лікар-стоматолог, хірург</p>
                 </article>
             </div>
             <a class="link-more" href="{{url_for('team')}}">Усі лікарі →</a>
@@ -235,14 +236,7 @@
         </div>
     </footer>
 
-    <script>
-    const toggle = document.getElementById('mobileToggle');
-    const nav = document.getElementById('mainNav');
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('open');
-        toggle.classList.toggle('open');
-    });
-    </script>
+    <script src="{{ url_for('static', filename='js/mobileopen.js') }}"></script>
     <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Ціни — Стоматологічна клініка Щолокових</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/prices.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
 </head>
@@ -1101,6 +1102,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 </script>
 
+    <script src="{{ url_for('static', filename='js/mobileopen.js') }}"></script>
     <script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
     <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
 </body>

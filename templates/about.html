@@ -6,6 +6,7 @@
     <title>Про клініку — Стоматологічна клініка Щолокових</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 <body>
@@ -131,6 +132,7 @@
 
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     </script>
+    <script src="{{ url_for('static', filename='js/mobileopen.js') }}"></script>
     <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
 </body>
 </html>
