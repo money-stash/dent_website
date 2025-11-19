@@ -54,21 +54,27 @@
         <section class="quick-services container">
             <h2>Популярні послуги</h2>
             <div class="cards-grid">
+                <a href="{{url_for('therapeutic')}}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-therapy.jpg') }}" alt="Терапія">
                     <h3>Терапевтична стоматологія</h3>
                     <p>Пломбування, лікування кореневих каналів, відновлення зубів.</p>
                 </article>
+                </a>
+                <a href="{{url_for('implant')}}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-implant.jpg') }}" alt="Імплантація">
                     <h3>Імплантація</h3>
                     <p>Сучасні імпланти, протоколи швидкого навантаження, 3D-планування.</p>
                 </article>
+                </a>
+                <a href="{{url_for('orthopedics_main')}}">
                 <article class="card">
                     <img src="{{ url_for('static', filename='assets/service-ortho.jpg') }}" alt="Ортодонтія">
                     <h3>Ортодонтія</h3>
                     <p>Брекети та капи для дорослих і дітей, цифровий сканер.</p>
                 </article>
+                </a>
             </div>
         </section>
 
@@ -102,31 +108,57 @@
         </section>
 
         <section class="team-preview container">
-            <h2>Наша команда</h2>
-            <div class="team-grid">
-                <article class="doctor-card">
-                    <img src="{{ url_for('static', filename='assets/doctor4.jpg') }}" alt="Доктор 4">
-                    <h4>Щолокова Наталія Вікторівна</h4>
-                    <p class="position">Головний лікар</p>
-                </article>
-                <article class="doctor-card">
-                    <img src="{{ url_for('static', filename='assets/doctor2.jpg') }}" alt="Доктор 2">
-                    <h4>Мельник Іван Миколайович</h4>
-                    <p class="position">Помічник</p>
-                </article>
-                <article class="doctor-card">
-                    <img src="{{ url_for('static', filename='assets/doctor3.jpg') }}" alt="Доктор 3">
-                    <h4>Негреба Наталія Іванівна</h4>
-                    <p class="position">Лікар-стоматолог-терапевт</p>
-                </article>
-                <article class="doctor-card">
-                    <img src="{{ url_for('static', filename='assets/doctor1.jpg') }}" alt="Доктор 1">
-                    <h4>Остапенко Олексій Дмитрович</h4>
-                    <p class="position">Лікар-стоматолог, хірург</p>
-                </article>
+        <h2>Наша команда</h2>
+
+        <div class="team-carousel" id="teamCarousel">
+            <button class="carousel-btn prev" id="teamPrev" aria-label="Попередні">◀</button>
+
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="teamTrack">
+                    <article class="doctor-card">
+                        <img src="{{ url_for('static', filename='assets/doctor4.jpg') }}" alt="Щолокова Наталія Вікторівна">
+                        <h4>Щолокова Наталія Вікторівна</h4>
+                        <p class="position">Головний лікар</p>
+                    </article>
+
+                    <article class="doctor-card">
+                        <img src="{{ url_for('static', filename='assets/doctor1.jpg') }}" alt="Остапенко Олексій Дмитрович">
+                        <h4>Остапенко Олексій Дмитрович</h4>
+                        <p class="position">Лікар-стоматолог, хірург</p>
+                    </article>
+
+                    <article class="doctor-card">
+                        <img src="{{ url_for('static', filename='assets/doctor3.jpg') }}" alt="Негреба Наталія Іванівна">
+                        <h4>Негреба Наталія Іванівна</h4>
+                        <p class="position">Лікар-стоматолог-терапевт</p>
+                    </article>
+
+                    <article class="doctor-card">
+                        <img src="{{ url_for('static', filename='assets/doctor5.jpg') }}" alt="Обіход Олександр Андрійович">
+                        <h4>Обіход Олександр Андрійович</h4>
+                        <p class="position">Лікар-стоматолог ортопед</p>
+                    </article>
+
+                    <article class="doctor-card">
+                        <img src="{{ url_for('static', filename='assets/doctor6.jpg') }}" alt="Бринзюк Ольга Володимирівна">
+                        <h4>Бринзюк Ольга Володимирівна</h4>
+                        <p class="position">Лікар-стоматолог ортодонт</p>
+                    </article>
+
+                    <article class="doctor-card">
+                        <img src="{{ url_for('static', filename='assets/doctor2.jpg') }}" alt="Мельник Іван Миколайович">
+                        <h4>Мельник Іван Миколайович</h4>
+                        <p class="position">Помічник</p>
+                    </article>
+                </div>
             </div>
-            <a class="link-more" href="{{url_for('team')}}">Усі лікарі →</a>
+
+            <button class="carousel-btn next" id="teamNext" aria-label="Наступні">▶</button>
+        </div>
+
+        <a class="link-more" href="{{url_for('team')}}">Усі лікарі →</a>
         </section>
+
 
         <section class="prices-preview container">
             <h2>Ціни (вибірка)</h2>
@@ -177,7 +209,7 @@
                     </div>
                 </div>
                 <div class="map-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18" loading="lazy" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.273516781678!2d30.526999399999998!3d50.491867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1fca236deed%3A0x1ba5d80dcf17dc73!2zS29ycHVzIDEsINCe0LHQvtC70L7QvdGB0YzQutCwINC90LDQsdC10YDQtdC20L3QsCwgMywg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1763553295622!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -238,5 +270,7 @@
 
     <script src="{{ url_for('static', filename='js/mobileopen.js') }}"></script>
     <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/team-carousel.js') }}"></script>
+
 </body>
 </html>

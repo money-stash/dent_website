@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ортодонтія — Стоматологічна практика Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/orthodontics_main.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Основна навігація">
+                <a href="{{ url_for('index') }}">Головна</a>
+                <a href="{{ url_for('services') }}">Послуги</a>
+                <a href="{{ url_for('team') }}">Лікарі</a>
+                <a href="{{ url_for('prices') }}">Ціни</a>
+                <a href="{{ url_for('about') }}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn" id="zapisBtn">Записатися</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Ортодонтія</h1>
+                <p>Брекети та капи для дорослих і дітей, цифровий сканер — точне планування і комфорт у м. Київ.</p>
+            </div>
+        </section>
+
+        <section class="article container">
+            <img class="article-cover" src="https://images.pexels.com/photos/28407748/pexels-photo-28407748.jpeg" alt="Ортодонтія">
+
+            <p>Ортодонтичне лікування допомагає виправити прикус, вирівняти зуби та відновити гармонію усмішки. У Стоматологічній практиці Щолокових використовуються сучасні брекети, прозорі капи та цифрові сканери для точності і комфорту пацієнтів різного віку.</p>
+
+            <h2>Брекети</h2>
+            <p>Ми пропонуємо металеві, керамічні та сапфірові брекет-системи. Індивідуальне планування та сучасні методики скорочують терміни лікування і підвищують комфорт при носінні.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/6529110/pexels-photo-6529110.jpeg" alt="Брекети">
+
+            <h2>Капи (елайнери)</h2>
+            <p>Прозорі елайнери — комфортний варіант для дорослих і підлітків, які цінують естетику. Лікування проводиться поетапно за цифровим планом, з контролем результату на кожному етапі.</p>
+
+            <h2>Цифровий сканер і 3D-планування</h2>
+            <p>Цифрове сканування замінює традиційні відбитки, робить процес швидким і точним. 3D-планування дає можливість візуалізувати результат і підготувати індивідуальний план лікування.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/6529121/pexels-photo-6529121.jpeg" alt="Цифровий сканер">
+
+            <h2>Дитяча ортодонтія</h2>
+            <p>Раннє обстеження дозволяє виявити проблеми прикусу й скоригувати їх на етапах росту. Застосовуємо знімні і незнімні апарати відповідно до віку і показань.</p>
+
+            <h2>Догляд і рекомендації</h2>
+            <ul class="article-list">
+                <li>регулярні огляди і контроль корекції;</li>
+                <li>догляд за брекетами та елайнерами;</li>
+                <li>використання ортодонтичних щіток і ниток;</li>
+                <li>цифровий контроль прогресу за допомогою сканера;</li>
+                <li>індивідуальний план лікування з прогнозом результату.</li>
+            </ul>
+
+            <p>У Стоматологічній практиці Щолокових в Києві ми поєднуємо клінічний досвід і цифрові технології, щоб лікування було прогнозованим і комфортним для пацієнта.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Ортодонтія для дітей і дорослих. Ми працюємо в Києві.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Головна</a></li>
+                    <li><a href="{{ url_for('services') }}">Послуги</a></li>
+                    <li><a href="{{ url_for('prices') }}">Ціни</a></li>
+                    <li><a href="{{ url_for('team') }}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ, Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/mobileopen.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

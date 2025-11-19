@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Терапевтична стоматологія — Стоматологічна практика Щолокових</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/therapeutic.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                <span>Стоматологічна практика Щолокових</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Основна навігація">
+                <a href="{{ url_for('index') }}">Головна</a>
+                <a href="{{ url_for('services') }}">Послуги</a>
+                <a href="{{ url_for('team') }}">Лікарі</a>
+                <a href="{{ url_for('prices') }}">Ціни</a>
+                <a href="{{ url_for('about') }}">Про клініку</a>
+                <a href="#" class="btn btn-primary zapisbtn" id="zapisBtn">Записатися</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <h1>Терапевтична стоматологія</h1>
+                <p>Пломбування, лікування кореневих каналів та відновлення зубів у Стоматологічній практиці Щолокових, м. Київ.</p>
+            </div>
+        </section>
+
+        <section class="article container" id="article">
+            <img class="article-cover" src="https://images.pexels.com/photos/287227/pexels-photo-287227.jpeg" alt="Терапевтична стоматологія">
+
+            <p>Терапевтична стоматологія — основа здоров’я ваших зубів. Ми пропонуємо діагностику та лікування карієсу, пульпіту, періодонтиту й ускладнень з використанням сучасних матеріалів і методик для максимального збереження зуба.</p>
+
+            <h2>Пломбування</h2>
+            <p>Якісне пломбування з композиційних матеріалів, із застосуванням ізоляції робочого поля й адекватної техніки прошарування. Це гарантує естетику та довговічність реставрації.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/305565/pexels-photo-305565.jpeg" alt="Пломбування">
+
+            <h2>Лікування кореневих каналів</h2>
+            <p>Сучасна ендодонтія: апаратна обробка, іригація, обтурація та рентген-/CBCT-контроль результату. Наша мета — зберегти зуб, мінімізувати біль і ризик повторних ускладнень.</p>
+
+            <h2>Відновлення зубів</h2>
+            <p>Реставрації композитами, вкладки та коронки для відновлення форми і функції зуба. Підбір матеріалів орієнтується на локалізацію, навантаження та естетичні вимоги пацієнта.</p>
+
+            <img class="article-image" src="https://images.pexels.com/photos/65055/pexels-photo-65055.jpeg" alt="Відновлення зубів">
+
+            <h2>Профілактика та догляд</h2>
+            <ul class="article-list">
+                <li>планові огляди та професійна гігієна;</li>
+                <li>індивідуальні поради по догляду та підбір засобів гігієни;</li>
+                <li>ремінералізаційна терапія при потребі;</li>
+                <li>слухняність рекомендаціям для довгострокового результату;</li>
+                <li>план лікування з урахуванням функції, естетики та бюджету.</li>
+            </ul>
+
+            <p>У Стоматологічній практиці Щолокових в м. Київ пацієнти отримують лікування, спрямоване на збереження зубів та відновлення їхньої функції з акцентом на комфорт і естетику.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a class="logo" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Логотип" />
+                    <span>Стоматологічна практика Щолокових</span>
+                </a>
+                <p>Якісна терапевтична стоматологія у Києві. Ліцензії та гарантія на всі роботи.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Головна</a></li>
+                    <li><a href="{{ url_for('services') }}">Послуги</a></li>
+                    <li><a href="{{ url_for('prices') }}">Ціни</a></li>
+                    <li><a href="{{ url_for('team') }}">Лікарі</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p><a href="tel:+380800331992">+38 (0 800) 33 1992</a></p>
+                <p><a href="mailto:solokovanatalia@gmail.com">solokovanatalia@gmail.com</a></p>
+                <p>м. Київ, Оболонська набережна 3, корпус 3</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© 2025 «Стоматологічна практика Щолокових». Усі права захищено.</small>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mobileopen.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/zapis.js') }}"></script>
+</body>
+</html>

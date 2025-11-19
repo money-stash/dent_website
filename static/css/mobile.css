@@ -1,81 +1,87 @@
-/*
-    Мобільні стилі (mobile.css)
-    Цей файл містить медіазапити, які перевизначають основні стилі
-    для забезпечення оптимального вигляду на екранах менше 700px (типовий мобільний)
-    та 980px (типовий планшет).
-*/
+@media (max-width: 700px) {
+    :root {
+        --mobile-gutter: 18px;
+    }
 
-/* --- Загальні стилі та типографія для мобільних --- */
-@media(max-width: 700px) {
+    html, body {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
     body {
-        font-size: 15px;
+        font-size: 15.5px;
+        line-height: 1.55;
     }
 
-    /* Встановлюємо єдиний бічний відступ 16px через контейнер */
     .container {
-        padding: 0 16px;
+        padding: 0 var(--mobile-gutter);
+        max-width: 100%;
     }
-    
+
     section {
-        padding: 30px 0 !important;
+        padding: 28px 0;
     }
 
     h1 {
-        font-size: 30px !important;
+        font-size: 28px;
+        line-height: 1.12;
+        margin: 0 0 12px;
+        text-align: left;
     }
 
     h2 {
-        font-size: 24px;
-        margin-bottom: 18px;
-    }
-    
-    /* ВИРІВНЮВАННЯ ТЕКСТУ ПО ЛІВОМУ КРАЮ */
-    /* Примусове вирівнювання тексту та заголовків по лівому краю */
-    h1, h2, h3, p {
-        text-align: left !important;
-    }
-
-    /* Приховування кнопки "Записатися" в основній навігації */
-    .main-nav .btn-primary.zapisbtn {
-        display: none; 
-    }
-    
-    /* Перевизначення центрування для Hero та About */
-    .hero-text {
-        text-align: left !important;
-    }
-    
-    .hero-ctas, .features {
-        justify-content: flex-start; 
-        flex-wrap: wrap;
-    }
-    
-    /* Вирівнювання списку переваг */
-    .about-grid > div {
+        font-size: 20px;
+        margin: 18px 0 10px;
         text-align: left;
     }
-}
 
-/* --- Хедер та Навігація --- */
-@media(max-width: 700px) {
-    .site-header {
-        border-bottom: none;
+    h3, p, li {
+        font-size: 15px;
+        color: var(--muted);
+        text-align: left;
+        margin: 8px 0;
     }
-    
-    .header-inner {
-        padding: 10px 0;
+
+    .hero-text {
+        text-align: left;
+        padding-right: 6px;
+    }
+
+    .hero-ctas {
+        display: flex;
+        gap: 10px;
+        margin-top: 14px;
+        flex-wrap: wrap;
+    }
+
+    .hero-ctas .btn {
+        flex: 1 1 auto;
+        min-width: 140px;
+        padding: 12px 14px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+        padding-left: 6px;
+    }
+
+    .main-nav .btn-primary.zapisbtn {
+        display: none;
     }
 
     .logo img {
         height: 40px;
         width: 40px;
     }
-    
+
     .logo span {
-        font-size: 16px;
+        font-size: 15px;
+        margin-left: 8px;
     }
 
-    /* Мобільне меню: повноекранне накладання */
     .main-nav {
         position: fixed;
         right: 0;
@@ -83,210 +89,295 @@
         height: 100vh;
         background: var(--bg);
         flex-direction: column;
-        padding: 80px 20px 20px;
+        padding: calc(var(--header-height,64px) + 18px) var(--mobile-gutter) 20px;
         transform: translateX(100%);
-        transition: transform .3s ease-in-out;
-        gap: 12px;
-        width: 100%; 
-        max-width: 320px;
+        transition: transform .28s ease-in-out;
+        gap: 14px;
+        width: 100%;
+        max-width: 360px;
         align-items: flex-start;
-        box-shadow: -4px 0 10px rgba(0,0,0,0.05);
-        z-index: 30;
+        box-shadow: -6px 0 22px rgba(0,0,0,0.06);
+        z-index: 40;
+        overflow-y: auto;
     }
-    
+
     .main-nav.open {
         transform: translateX(0);
     }
-    
+
     .main-nav a {
         display: block;
         width: 100%;
         text-align: left;
-        padding: 12px 10px;
+        padding: 14px 10px;
         font-size: 17px;
+        border-radius: 10px;
     }
-    
+
     .mobile-toggle {
         display: block;
-        z-index: 45;
+        width: 44px;
+        height: 44px;
+        padding: 6px;
+        background: transparent;
+        border: none;
     }
-    
-    /* Стилі для іконки-гамбургера */
+
     .mobile-toggle span {
-        transition: all 0.3s ease;
+        display: block;
+        height: 2px;
+        background: var(--text);
+        margin: 6px 0;
+        border-radius: 2px;
+        transition: transform .22s ease, opacity .18s ease;
     }
 
     .mobile-toggle.open span:nth-child(1) {
         transform: translateY(6px) rotate(45deg);
     }
-
     .mobile-toggle.open span:nth-child(2) {
         opacity: 0;
     }
-
     .mobile-toggle.open span:nth-child(3) {
         transform: translateY(-6px) rotate(-45deg);
     }
-}
 
-
-/* --- Секція Hero (Планшет) --- */
-@media(max-width: 980px) {
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
+        align-items: start;
     }
-    
-    .hero-text {
-        order: 2;
-        /* text-align: left перевизначено на 700px */
-    }
-    
-    .hero-text h1 {
-        font-size: 32px;
-    }
-    
-    .hero-image {
-        order: 1;
-    }
-    
+
     .hero-image img {
-        max-height: 300px;
+        width: 100%;
+        height: auto;
+        max-height: 320px;
         object-fit: cover;
+        border-radius: 10px;
     }
-    
-    /* Buttons and features are handled at 700px to align left */
-    .hero-ctas {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-    
-    .features {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 15px;
-    }
-}
 
-/* --- Картки Послуг --- */
-@media(max-width: 980px) {
     .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(max-width: 600px) {
-    .cards-grid {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 14px;
     }
-    
+
+    .card {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 6px 18px rgba(15,30,45,0.04);
+        padding-bottom: 12px;
+    }
+
     .card img {
+        width: 100%;
         height: 180px;
+        object-fit: cover;
+        display: block;
     }
-}
 
-/* --- Про клініку (About) --- */
-@media(max-width: 980px) {
     .about-grid {
+        display: flex;
         flex-direction: column;
-        gap: 30px;
-        align-items: stretch;
+        gap: 18px;
     }
-    
+
     .stats {
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    
-    .stat {
-        flex: 1 1 auto;
-        min-width: 100px;
-    }
-}
-
-/* --- Команда (Team) --- */
-@media(max-width: 980px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    /* ЗБІЛЬШЕНА ВИСОТА ЗОБРАЖЕНЬ ЛІКАРІВ (ПЛАНШЕТ) */
-    .doctor-card img {
-        height: 420px;
-    }
-}
-
-@media(max-width: 600px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-    /* ЗБІЛЬШЕНА ВИСОТА ЗОБРАЖЕНЬ ЛІКАРІВ (МОБІЛЬНИЙ) */
-    .doctor-card img {
-        height: 320px;
-    }
-}
-
-/* --- Контакти --- */
-@media(max-width: 980px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-preview .lead {
-        font-size: 16px;
-    }
-    
-    .contact-buttons {
         display: flex;
         gap: 10px;
+        justify-content: space-between;
         flex-wrap: wrap;
-        margin-top: 15px;
     }
-}
 
-
-/* --- Відгуки --- */
-@media(max-width: 600px) {
-    .reviews-slider {
-        /* Дозволяємо горизонтальний скрол */
-        padding-bottom: 10px;
-    }
-    
-    .review {
-        min-width: 80%;
-    }
-}
-
-/* --- Футер --- */
-@media(max-width: 700px) {
-    .footer-grid {
-        flex-direction: column;
-        gap: 25px;
-    }
-    
-    .footer-col {
-        flex: 1 1 100%;
-        /* ВИРІВНЮВАННЯ ФУТЕРА ПО ЛІВОМУ КРАЮ */
+    .stat {
+        flex: 1 1 30%;
+        min-width: 110px;
+        background: #fff;
+        padding: 12px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(15,30,45,0.04);
         text-align: left;
     }
-    
-    .footer-col .logo {
-        justify-content: flex-start;
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
-    
-    .footer-col ul {
-        list-style: none;
-        padding: 0;
+
+    .doctor-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
     }
-    
-    .footer-bottom {
-        text-align: center;
+
+    .prices-grid {
+        display: grid;
+        gap: 10px;
+    }
+
+    .price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(15,30,45,0.04);
+    }
+
+    .reviews-slider {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .review {
+        min-width: 78%;
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(15,30,45,0.04);
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .map-placeholder iframe {
+        width: 100%;
+        height: 200px;
+        border: 0;
+        border-radius: 10px;
+    }
+
+    .modal {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(8,12,20,0.45);
+        z-index: 60;
+        padding: 20px;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 520px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 10px 30px rgba(9,20,40,0.16);
+        overflow: auto;
+    }
+
+    .modal-content form input,
+    .modal-content form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin: 8px 0 14px;
+        border: 1px solid rgba(10,20,30,0.06);
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    .modal-content .btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footer-col {
+        text-align: left;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .link-more {
+        display: inline-block;
+        margin-top: 8px;
+        color: var(--primary);
+    }
+
+    .article {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .article h1 {
+        font-size: 26px;
+    }
+
+    .article p, .article li {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    html, body {
+        overflow-x: hidden;
     }
 }
 
-/* --- Модальне вікно --- */
-@media(max-width: 500px) {
+@media (max-width: 480px) {
+    :root {
+        --mobile-gutter: 14px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        max-height: 260px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-card img {
+        height: 400px;
+    }
+
+    .mobile-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo span {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .main-nav {
+        padding-top: calc(var(--header-height,64px) + 12px);
+    }
+
+    .main-nav a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
     .modal-content {
-        margin: 10% 10px;
-        width: auto;
+        padding: 14px;
+        max-width: 440px;
+    }
+
+    .article-cover, .article-image {
+        border-radius: 10px;
     }
 }
